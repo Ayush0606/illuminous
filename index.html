@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ILLUMINOUS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins' , sans-serif;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #1d2026;
+        }
+
+        .a{
+            background-color: #1d2026;
+            min-height: 100% ;
+            width: 100%;
+            color: #fff;
+            position: relative;
+
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            padding: 20px /* 20px from top and bottom*/ 8%;
+        }
+
+        nav .menu-img{
+            width: 25px;
+            margin-right: 20px;
+            cursor: pointer;
+
+
+
+        }
+
+        nav.logo{
+            width: 160px;
+            
+            cursor: pointer;
+
+        }
+        nav ul{
+            flex: 1;
+            text-align: right;
+            font-family: sans-serif;
+
+        }
+        nav ul li{
+            display: inline-block;
+            list-style: none;
+            margin: 0 20px;
+
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: #fff;
+        }
+
+        nav ul li a:hover{
+            background-color: blueviolet;
+            transition: .5s;
+            
+        }
+        button{
+            background:#efefef ;
+            height: 30px;
+            width: 60px;
+            border-radius: 20px;
+            border: 0;
+            outline: 0;
+            cursor:pointer ;
+            transition: background 0.5s ;
+
+
+        }
+        button span{
+            display: block;
+            background: #999;
+            height: 26px;
+            width: 26px;
+            border-radius: 50%;
+            margin-left: 0.5px;
+            
+            transition: background 2s ;
+            margin-left: 0.5s;
+
+
+
+
+
+
+        }
+
+        .container{
+            position: absolute;
+            top: 0;
+            left: 34%;
+            width: 200px;
+
+
+        }
+
+        .lamp{
+            width: 100%;
+            position: relative;
+            left: -50px;
+
+
+
+        }
+
+        .light{
+            position: absolute;
+            top: 97%;
+            left: 20%;
+            transform: translateX(-50%);
+            width: 700px;
+            opacity: 0;
+            transition: opacity 0.5s;
+
+
+
+        }
+        .inner{
+            max-width: 600px ;
+            margin-top: 7%;
+            margin-left: 57%;
+
+
+        }
+
+        .inner h1{
+            color: #fff;
+            font-size: 80px;
+            font-weight:400 ;
+        }
+
+        .inner a{
+            text-decoration: none;
+            background: #00986f;
+            padding: 14px 40px;
+            display: inline-block;
+            color: #fff;
+            font-size:18px ;
+            margin-top: 30px;
+            border-radius: 30px;
+
+        }
+
+        .inner p{
+            color: #fff;
+            font-family:monospace;
+            font-weight:bold;
+        }
+
+        .control{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: 150px;
+
+
+        }
+
+        .control .line{
+            width: 250px;
+            height: 4px;
+            background: #fff;
+            border-radius: 2px;
+            margin: 0 20px;
+
+
+
+             
+        }
+        .control .line span{
+            width: 150px;
+            height: 8px;
+            margin-top: -2px ;
+            border-radius: 4px; ;
+            background: #00986f;
+            display: block;        }
+
+            .active{
+                background: green;
+                
+
+            }
+
+            .active span{
+                background: #fff;
+                margin-left: 31px;
+
+            }
+
+            .on{
+                opacity: 1;
+            }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <nav>
+            <img src="menu.png" alt="" class="memu-img">
+            <img src="logo.png" alt="" class="logo">
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Images</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">More</a></li>
+            </ul>
+            <button type="button" onclick="toggleBtn()" id="btn"><span></span></button>
+        </nav>
+    </div>
+
+    <div class="container">
+        <img src="lamp.png" alt="" class="lamp">
+        <img src="light.png" alt="" class="light" id="light">
+
+    </div>
+
+    <div class="inner">
+        <h1>LATEST <br> IN LIGHTING</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe magni natus veritatis, nobis odit, provident nam recusandae libero atque repellendus 
+            laborum corrupti non eaque omnis tempora accusamus ducimus, in itaque inventore! Blanditiis est iusto aliquam porro quae quibusdam libero, architecto corrupti odio commodi 
+            explicabo maxime tempore ab in eos molestias expedita autem delectus magnam facere deserunt impedit officiis quod enim. Necessitatibus, molestiae voluptas, quas voluptatum cumque sequi non
+             fugiat perspiciatis totam cupiditate, exercitationem aspernatur fuga?</p>
+             <a href="">Check All Collections</a>
+             <div class="control">
+                <p>04</p>
+                <div class="line"><span></span></div>
+                <p>05</p>
+             </div>
+
+    </div>
+    <script>
+    var btn = document.getElementById("btn");
+    
+    var light = document.getElementById("light");
+    function toggleBtn(){
+        btn.classList.toggle("active");
+        light.classList.toggle("on");
+        
+
+
+    }
+    </script>
+
+    
+</body>
+</html>
